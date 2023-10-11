@@ -48,7 +48,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     newUser,
     `${req.protocol}://${req.get('host')}//me`
   ).sendWelcome();
-  createSendToken(newUser, 201, req, res);
+  createSendToken(newUser, 201, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
